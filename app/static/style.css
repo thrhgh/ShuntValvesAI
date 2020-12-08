@@ -1,0 +1,99 @@
+body
+{
+    background-color: #494949;
+    font-family: 'Fira Sans', sans-serif;
+    color: #FFFFFF;
+
+}
+
+.no-display {
+    display: none;
+}
+
+.center {
+    margin: auto;
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 35px;
+
+}
+
+.canvas {
+border: 1px solid #FFFFFF;
+border-radius: 2px;
+margin:auto;
+width: 100%;
+max-width: 300px;
+}
+
+.content {
+   margin-top: 1em;
+}
+
+.analyze {
+    margin-top: 2em;
+}
+
+.upload-label {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.result-label {
+    margin-top: 0.5em;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.choose-file-button {
+  width: 200px;
+  height: 40px;
+  border: solid 1px #7052CB;
+  border-radius: 2px;
+  background-color: #7052CB;
+  font-size: 20px;
+  color: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+ul, li {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+button.crop-button {
+    width: 100px;
+    height: 40px;
+    border: solid 1px #7052CB;
+    border-radius: 2px;
+    background-color: #7052CB;
+    font-size: 20px;
+    color: #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+button.crop-button: hover {
+  background-color: #483A95;
+}
+
+button.analyze-button {
+    width: 200px;
+    height: 40px;
+    border: solid 1px #7052CB;
+    border-radius: 2px;
+    background-color: #7052CB;
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: -10px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:focus {
+    outline: 0;
+}
