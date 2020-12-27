@@ -1,0 +1,69 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shunt Valve AI</title>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+  <script src='../static/cropper.js'></script>
+</head>
+<body>
+<div>
+  <div class='center'>
+    <div class='title'><b>Shunt Valve AI</b></div>
+    Use x-ray images of shunt valves to classify them into their model.
+    <div class='content'>
+      <div class='no-display'>
+        <input id='fileInput'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='handleFileSelect()'>
+      </div>
+
+      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+
+      <div class='upload-label'>
+        <label id='upload-label'></label>
+      </div>
+      <div>
+        <canvas id='image-picked' alt='Chosen Image' class='canvas' height='300'>Your browser does not support canvas.</canvas>
+        <span id='originalImage'></span>
+      </div>
+
+
+
+      <script type="text/javascript">
+        cropper.start(document.getElementById("image-picked"), 1);
+        function handleFileSelect() {
+          var file = document.getElementById("fileInput").files[0];
+          var reader = new FileReader();
+          reader.onload = function(event) {
+            var data = event.target.result;
+            cropper.showImage(data);
+          };
+          reader.readAsDataURL(file);
+        }
+
+      </script>
+
+
+      <div class='analyze'>
+      <ul>
+      <li><button class='crop-button' onclick="cropper.startCropping()" type='button' value="Start cropping">Crop</button></li>
+      <li><button  class='crop-button' onclick="cropper.getCroppedImageSrc()" type='button' value="Crop">Save</button></li>
+      </ul>  <p>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
